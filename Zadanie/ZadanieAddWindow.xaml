@@ -1,0 +1,87 @@
+﻿<Window x:Class="Demo.Zadanie.ZadanieAddWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Demo.Zadanie"
+        mc:Ignorable="d"
+        Title="ZadanieEditWindow" Height="650" Width="500"
+        WindowStartupLocation="CenterScreen"
+        MinHeight="650" MinWidth="500"
+        MaxHeight="650" MaxWidth="500">
+    <Window.Resources>
+        <ResourceDictionary Source="/ResourseFolder/Dictionary.xaml"/>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="103*"/>
+            <ColumnDefinition Width="282*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="7*"/>
+        </Grid.RowDefinitions>
+        <Image Grid.Column="1" Grid.Row="0" Grid.RowSpan="2"  />
+        <!--Если в базе данных больше столбцов чем в шаблоне
+        то нужно добавить rowdefenition и скопировать лейбл
+        с текстбоксом и поменять x:Name и RowDefenition
+        Нужно поменять content каждого лейбла по заданию
+        и имя текстбокса, меняется в зависимости от задания-->
+        <Label Content="Добавление по заданию" Grid.Column="2" 
+               FontSize="22"
+               Style="{DynamicResource LebelLogoStyle}" />
+        <Label Content="По заданию" Grid.Row="1" Grid.Column="1" 
+               Style="{DynamicResource LebelNormalStyle}" />
+        <TextBox Grid.Row="1" Grid.Column="2" x:Name="Text0Tb"/>
+        <Label Content="По заданию" Grid.Row="2" Grid.Column="1" 
+               Style="{DynamicResource LebelNormalStyle}" />
+        <TextBox Grid.Row="2" Grid.Column="2" x:Name="Text1Tb"/>
+        <Label Content="По заданию" Grid.Row="3" Grid.Column="1" 
+               Style="{DynamicResource LebelNormalStyle}" />
+        <TextBox Grid.Row="3" Grid.Column="2" x:Name="Text2Tb"/>
+        <Label Content="По заданию" Grid.Row="4" Grid.Column="1" 
+               Style="{DynamicResource LebelNormalStyle}" />
+        <TextBox Grid.Row="4" Grid.Column="2" x:Name="Text3Tb"/>
+        <Label Content="По заданию" Grid.Row="5" Grid.Column="1" 
+               Style="{DynamicResource LebelNormalStyle}" />
+        <TextBox Grid.Row="5" Grid.Column="2" x:Name="Text4Tb"/>
+        <Label Content="По заданию" Grid.Row="6" Grid.Column="1" 
+               Style="{DynamicResource LebelNormalStyle}" />
+        <TextBox Grid.Row="6" Grid.Column="2" x:Name="Text5Tb"/>
+        <Label Content="По заданию" Grid.Row="7" Grid.Column="1" 
+               Style="{DynamicResource LebelNormalStyle}"  />
+        <TextBox Grid.Row="7" Grid.Column="2" x:Name="Text6Tb"/>
+        <Label Content="По заданию" Grid.Row="8" Grid.Column="1" 
+               Style="{DynamicResource LebelNormalStyle}"/>
+        <TextBox Grid.Row="8" Grid.Column="2" x:Name="Text7Tb"/>
+        <Label Content="По заданию" Grid.Row="9" Grid.Column="1" 
+               Style="{DynamicResource LebelNormalStyle}"/>
+        <TextBox Grid.Row="9" Grid.Column="2" x:Name="Text8Tb"/>
+        <Label Content="По заданию" Grid.Row="10" Grid.Column="1" 
+               Style="{DynamicResource LebelNormalStyle}"/>
+        <TextBox Grid.Row="10" Grid.Column="2" x:Name="Text9Tb"/>
+        <Button x:Name="login" Content="Назад" Grid.Column="2"
+                Grid.Row="11"
+                Click="login_Click" />
+        <Button x:Name="exit" Content="Выйти" Grid.Column="1"
+                Grid.Row="11"
+                Click="exit_Click"/>
+        <Button x:Name="registration" Content="Добавить"
+                Grid.Row="12" Grid.Column="1" Grid.ColumnSpan="2" 
+                Click="registration_Click" />
+    </Grid>
+</Window>
